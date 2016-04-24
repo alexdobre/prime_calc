@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=lEvXcTYqtKU
 The Lucas numbers primality test goes as follows. If for example we wanted to test if 5 is prime, we look at the fifth number in the sequence, which would be 11 and we subtract 1 then test if it's a multiple of 5.
 If yes then it's highly likely (but not guaranteed) that the tested number is prime, if no then it's guaranteed that the tested number is not prime.
 
->My Lucas filter algorithm has a thread which calculates and produces prime candidates (numbers that pass the filter), then a thread pool tests the prime candidates using the standard trial by division algorithm to obtain certainty.
+>My Lucas filter algorithm uses a producer, consumer design pattern. It has a thread which calculates and produces prime candidates (numbers that pass the filter), then a thread pool tests the prime candidates using the standard trial by division algorithm to obtain certainty.
 
 ## How to run
 After cloning the repository there are a few ways to run the code.
